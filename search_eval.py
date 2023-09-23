@@ -1,7 +1,6 @@
 import math
 import sys
 import time
-import numpy as np
 from scipy import stats
 
 import metapy
@@ -98,7 +97,7 @@ if __name__ == '__main__':
         for item in result_bm25:
             output.write('%s\n' % item)
 
-    result_inl2 = np.array(list(map(float,result_inl2)))
-    result_bm25 = np.array(list(map(float,result_bm25)))
+    result_inl2 = list(map(float,result_inl2))
+    result_bm25 = list(map(float,result_bm25))
     with open ('significance.txt','w') as output:
         output.write("%s" % stats.ttest_rel(result_inl2, result_bm25)[1])
