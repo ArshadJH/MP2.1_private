@@ -1,7 +1,7 @@
 import math
 import sys
 import time
-from scipy import stats
+# from scipy import stats
 
 import metapy
 import pytoml
@@ -99,5 +99,5 @@ if __name__ == '__main__':
 
     result_inl2 = list(map(float,result_inl2))
     result_bm25 = list(map(float,result_bm25))
-    with open ('significance.txt','w') as output:
-        output.write("%s" % stats.ttest_rel(result_inl2, result_bm25)[1])
+    # with open ('significance.txt','w') as output:
+    #     output.write("%s" % stats.ttest_rel(result_inl2, result_bm25)[1])
