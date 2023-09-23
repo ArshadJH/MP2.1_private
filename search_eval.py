@@ -5,7 +5,7 @@ import time
 import metapy
 import pytoml
 
-import numpy as np
+# import numpy as np
 
 class InL2Ranker(metapy.index.RankingFunction):
     """
@@ -98,5 +98,5 @@ if __name__ == '__main__':
         for item in result_bm25:
             output.write("%s\n" % item)
 
-    result_inl2 = np.array(map(float,result_inl2))
-    result_bm25 = np.array(map(float,result_bm25))
+    # result_inl2 = np.array(map(float,result_inl2))
+    # result_bm25 = np.array(map(float,result_bm25))
